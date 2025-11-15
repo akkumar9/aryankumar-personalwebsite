@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 240 10% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 8% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 8% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 280 90% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 190 90% 55%;
+    --secondary-foreground: 240 10% 5%;
+
+    --muted: 240 8% 15%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 340 85% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 8% 18%;
+    --input: 240 8% 18%;
+    --ring: 280 90% 65%;
+
+    --radius: 1rem;
+
+    /* Vibrant gradient system */
+    --gradient-1: linear-gradient(135deg, hsl(280, 90%, 65%), hsl(340, 85%, 60%));
+    --gradient-2: linear-gradient(135deg, hsl(190, 90%, 55%), hsl(280, 90%, 65%));
+    --gradient-3: linear-gradient(135deg, hsl(340, 85%, 60%), hsl(50, 95%, 60%));
+    
+    /* Glow effects */
+    --glow-primary: 0 0 40px hsl(280 90% 65% / 0.5);
+    --glow-secondary: 0 0 40px hsl(190 90% 55% / 0.5);
+    --glow-accent: 0 0 40px hsl(340 85% 60% / 0.5);
+    
+    /* Mesh background */
+    --mesh-1: hsl(280, 90%, 65%);
+    --mesh-2: hsl(190, 90%, 55%);
+    --mesh-3: hsl(340, 85%, 60%);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-1);
+  }
+  
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+  
+  .glow-secondary {
+    box-shadow: var(--glow-secondary);
+  }
+  
+  .glow-accent {
+    box-shadow: var(--glow-accent);
+  }
+  
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
