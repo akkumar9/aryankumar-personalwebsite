@@ -1,1 +1,1 @@
-#check it out for yourself
+check it out for yourself
