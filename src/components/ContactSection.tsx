@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Mail, Linkedin, MapPin, Calendar } from "lucide-react";
+import { Mail, Linkedin, MapPin, Calendar, Github } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -15,11 +15,11 @@ const ContactSection = () => {
             <span className="text-gradient">Let's Build Something</span>
           </h2>
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            I'm always open to discussing new projects, creative ideas, or opportunities to be part 
-            of impactful engineering teams.
+            Open to discussing new projects, internship opportunities, or collaborating on 
+            AI/ML applications, backend systems, and robotics solutions.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
             <Card className="p-6 bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 group">
               <a
                 href="mailto:ark009@ucsd.edu"
@@ -47,7 +47,24 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <div className="font-semibold text-foreground mb-1">LinkedIn</div>
-                  <div className="text-sm text-muted-foreground">Connect with me</div>
+                  <div className="text-sm text-muted-foreground">Connect</div>
+                </div>
+              </a>
+            </Card>
+
+            <Card className="p-6 bg-card/50 backdrop-blur-sm border-border hover:border-accent/50 transition-all duration-300 group">
+              <a
+                href="https://github.com/akkumar9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 text-left"
+              >
+                <div className="p-4 rounded-full bg-accent/10 group-hover:bg-accent/20 transition-colors">
+                  <Github className="h-6 w-6 text-accent" />
+                </div>
+                <div>
+                  <div className="font-semibold text-foreground mb-1">GitHub</div>
+                  <div className="text-sm text-muted-foreground">View code</div>
                 </div>
               </a>
             </Card>
@@ -60,16 +77,16 @@ const ContactSection = () => {
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="h-4 w-4 text-secondary" />
-              <span>Available for opportunities</span>
+              <span>Available for Summer 2026 internships</span>
             </div>
           </div>
 
           <div className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-8">
             <p className="text-muted-foreground leading-relaxed">
-              Currently majoring in Computer Engineering at UC San Diego while remaining active 
-              in research, development, and leadership roles. Particularly interested in projects at the 
-              intersection of hardware and software, ML/AI applications, and solutions with measurable 
-              real-world impact.
+              Currently studying Computer Engineering at UC San Diego while working on AI integrations, 
+              backend systems, and robotics research. Particularly interested in roles involving LLM 
+              applications, system architecture, autonomous systems, or building tools that solve real 
+              business problems.
             </p>
           </div>
         </div>

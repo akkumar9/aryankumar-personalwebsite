@@ -2,73 +2,59 @@ import { Badge } from "@/components/ui/badge";
 
 const timeline = [
   {
-    year: "2021",
-    title: "Started VEX Robotics Journey",
-    subtitle: "Foothill Robotics",
-    description: "Began competitive robotics as Programmer/Designer/Strategist, qualified for 3 State and 2 World Championships",
-    type: "experience",
-  },
-  {
     year: "2023",
-    title: "INSIGHT Vice President",
-    subtitle: "Assistive Technology Startup",
-    description: "Led 6-person engineering team developing ML-powered mobility device, raised $5k seed funding",
+    title: "SynergyPlus Platform Launch",
+    subtitle: "Full-Stack Development",
+    description: "Created web gradebook serving 13,000+ students district-wide, handling 50,000+ monthly requests",
+    type: "experience",
+  },
+  {
+    year: "Aug 2023",
+    title: "Founded INSIGHT Computer Vision",
+    subtitle: "Systems Engineer",
+    description: "Built real-time object detection system achieving 90% accuracy across 5,000+ images, deployed across 12 camera nodes",
     type: "experience",
   },
   {
     year: "2024",
-    title: "PVSA Gold Award",
-    subtitle: "Presidential Volunteer Service",
-    description: "Earned Gold-level Presidential Volunteer Service Award for outstanding community service",
-    type: "achievement",
+    title: "Started at UC San Diego",
+    subtitle: "Jacobs Scholar",
+    description: "Began Computer Engineering program as a Jacobs Scholar, the highest honor for incoming engineering students at UCSD",
+    type: "education",
   },
   {
-    year: "2024",
-    title: "3rd Place ACSEF",
-    subtitle: "Science & Engineering Fair",
-    description: "Placed third at ACSEF for innovative engineering project",
-    type: "achievement",
-  },
-  {
-    year: "2024",
-    title: "Research Assistant @ UC Davis",
-    subtitle: "Aerospace Engineering",
-    description: "Optimized airfoil design increasing wind-tunnel power output 15% and engineered systems achieving 30% smoother motion",
+    year: "Jul 2024",
+    title: "UC Davis ECE Department",
+    subtitle: "Embedded Systems Engineer",
+    description: "Developed C/C++ firmware for STM32 medical devices, achieving 20% battery life improvement while maintaining sub-1ms alert response",
     type: "experience",
   },
   {
-    year: "2024",
-    title: "Blue Ocean Pitch Top 100",
-    subtitle: "Entrepreneurship Competition",
-    description: "Selected as Top 100 finalist in Blue Ocean entrepreneurship pitch competition",
-    type: "achievement",
+    year: "Oct 2025",
+    title: "Qualcomm",
+    subtitle: "Systems Developer Intern",
+    description: "Built scalable backend with FastAPI and Docker serving 500+ users, implemented automated deployments cutting release time by 50%",
+    type: "experience",
   },
   {
-    year: "2024",
-    title: "VEX California State Champion",
-    subtitle: "First Place",
-    description: "Led team to victory at the California State Championship",
-    type: "achievement",
+    year: "Dec 2025",
+    title: "Automate365",
+    subtitle: "AI Automation Systems Intern",
+    description: "Connected GPT-4 and Claude AI to CRMs, reducing manual workflow by 40-60%. Built systems processing 10,000+ daily events",
+    type: "experience",
   },
   {
-    year: "2024",
-    title: "VEX Nationals Finalist",
-    subtitle: "National Competition",
-    description: "Advanced to finals at VEX Nationals, demonstrating consistent excellence in competitive robotics",
-    type: "achievement",
+    year: "Jan 2026",
+    title: "Existential Robotics Lab",
+    subtitle: "Undergraduate Researcher",
+    description: "Working on probabilistic navigation algorithms with ROS2, achieving 15cm position accuracy in GPS-denied environments",
+    type: "experience",
   },
   {
-    year: "2024",
-    title: "VEX World Championship Semifinalist",
-    subtitle: "Top 2% Globally",
-    description: "Competed at the highest level of high school robotics, reaching semifinals at Worlds",
-    type: "achievement",
-  },
-  {
-    year: "2029",
-    title: "UC San Diego - Jacobs Scholar",
+    year: "2028",
+    title: "Expected Graduation",
     subtitle: "B.S. Computer Engineering",
-    description: "Expected graduation as Jacobs Scholar, the highest honor for incoming engineering students at UCSD",
+    description: "Continuing work in AI systems, robotics, and backend development while pursuing degree at UC San Diego",
     type: "education",
   },
 ];
@@ -79,10 +65,10 @@ const Timeline = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-gradient">Journey & Achievements</span>
+            <span className="text-gradient">Journey & Timeline</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Key milestones in engineering and leadership
+            From embedded systems to AI integrations and robotics research
           </p>
         </div>
         <div className="max-w-4xl mx-auto relative">
@@ -107,8 +93,6 @@ const Timeline = () => {
                         className={
                           item.type === "education" 
                             ? "bg-primary/20 text-primary"
-                            : item.type === "achievement"
-                            ? "bg-accent/20 text-accent"
                             : "bg-secondary/20 text-secondary"
                         }
                       >

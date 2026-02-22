@@ -1,63 +1,61 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ExternalLink, Github } from "lucide-react";
 import { useState } from "react";
 
 const projects = [
   {
-    title: "INSIGHT Mobility Device",
-    tagline: "ML-Powered Assistive Technology",
-    description: "Leading a 6-person team to develop an assistive mobility device using ML-based sensor fusion. Achieved 22% accuracy improvement and secured $5k in seed funding.",
-    tech: ["Machine Learning", "Sensor Fusion", "Hardware", "Leadership"],
-    metrics: ["100+ users tested", "$5k funding", "22% accuracy gain"],
+    title: "Existential Robotics Lab",
+    tagline: "Autonomous Navigation Research",
+    description: "Working with Prof. Atanasov on probabilistic navigation algorithms using Bayesian inference. Built real-time 3D mapping system with ROS2 achieving 15cm accuracy in GPS-denied environments.",
+    tech: ["Python", "C++", "ROS2", "SLAM", "Sensor Fusion"],
+    metrics: ["35% faster computation", "15cm accuracy", "Multi-robot coordination"],
     gradient: "from-primary to-accent",
-    year: "2023 - Present",
+    year: "Jan 2026 - Present",
+  },
+  {
+    title: "Qualcomm",
+    tagline: "Systems Developer Intern",
+    description: "Built scalable backend serving 500+ users with Python FastAPI and Docker. Set up automated CI/CD deployments cutting release time by 50% with zero downtime.",
+    tech: ["Python", "FastAPI", "Docker", "AWS", "PostgreSQL"],
+    metrics: ["500+ concurrent users", "50% faster deployments", "Real-time monitoring"],
+    gradient: "from-secondary to-primary",
+    year: "Oct 2025 - Present",
+  },
+  {
+    title: "Automate365",
+    tagline: "AI Automation Systems Intern",
+    description: "Connected GPT-4 and Claude AI to CRMs like HubSpot and Salesforce, cutting manual work by 40-60%. Built webhook systems processing 10,000+ daily events with 200ms response times.",
+    tech: ["Python", "LLM Integration", "REST APIs", "AWS Lambda"],
+    metrics: ["10k+ events daily", "40-60% efficiency gain", "200ms latency"],
+    gradient: "from-accent to-secondary",
+    year: "Dec 2025 - Present",
+  },
+  {
+    title: "UC Davis ECE",
+    tagline: "Embedded Systems Engineer",
+    description: "Wrote C/C++ firmware for STM32 medical devices streaming sensor data over Bluetooth. Extended battery life by 20% while maintaining sub-1ms alert response times.",
+    tech: ["C/C++", "STM32", "Bluetooth LE", "Embedded Systems"],
+    metrics: ["20% battery improvement", "Sub-1ms alerts", "Kalman filtering"],
+    gradient: "from-primary to-secondary",
+    year: "Jul 2024 - May 2025",
+  },
+  {
+    title: "INSIGHT Computer Vision",
+    tagline: "Founder & Systems Engineer",
+    description: "Built computer vision system with YOLOv5 achieving 30+ FPS on edge devices. Hit 90% accuracy across 5,000+ images while making it 40% faster. Scaled to 12 cameras handling 1,000+ requests per minute.",
+    tech: ["C++", "Python", "YOLOv5", "CUDA", "Flask", "Redis"],
+    metrics: ["90% accuracy", "40% faster", "1k+ req/min"],
+    gradient: "from-accent to-primary",
+    year: "Aug 2023 - Apr 2025",
   },
   {
     title: "SynergyPlus Platform",
-    tagline: "Education Management System",
-    description: "Built a comprehensive gradebook platform serving 4,000+ users across 12 schools. Developed automation tools that cut teacher workflow time by 35%.",
-    tech: ["React", "Node.js", "PostgreSQL", "Automation"],
-    metrics: ["4k+ users", "12 schools", "35% efficiency gain"],
-    gradient: "from-secondary to-primary",
-    year: "2023 - 2025",
-  },
-  {
-    title: "UC Davis Research",
-    tagline: "Aerospace & Mechanical Engineering",
-    description: "Optimized airfoil design increasing wind-tunnel power output by 15%. Engineered globoidal cam achieving 30% smoother motion.",
-    tech: ["CAD", "Simulation", "Optimization", "Wind Tunnel"],
-    metrics: ["15% power increase", "30% smoother motion"],
-    gradient: "from-accent to-secondary",
-    year: "2024 - 2025",
-  },
-  {
-    title: "Jeong Lab Intern",
-    tagline: "Hardware Engineering",
-    description: "Designed and fabricated 5 custom PCBs in EagleCAD for the Jeong Lab. Integrated Bluetooth SoC improving connectivity stability by 25%.",
-    tech: ["EagleCAD", "PCB Design", "Bluetooth", "Embedded Systems"],
-    metrics: ["5 PCBs fabricated", "40% faster cycles", "25% better stability"],
-    gradient: "from-primary to-secondary",
-    year: "2024 - 2025",
-  },
-  {
-    title: "VEX Robotics Competition",
-    tagline: "World-Class Robotics",
-    description: "Qualified for 3 State and 2 World Championships (top 2%). Led team to State Championship victory and raised $20k in sponsorships.",
-    tech: ["C++", "Robotics", "CAD", "Strategy"],
-    metrics: ["Top 2% globally", "$20k raised", "State Champion"],
-    gradient: "from-accent to-primary",
-    year: "2021 - 2025",
-  },
-  {
-    title: "Jetson UI/UX Intern",
-    tagline: "Product Design & Testing",
-    description: "Designed Figma-based UI boosting daily retention by 6%. Executed 100+ UI/UX tests, lowering post-release defects by 20%.",
-    tech: ["Figma", "UI/UX", "Testing", "Analytics"],
-    metrics: ["6% retention boost", "100+ tests", "20% fewer defects"],
+    tagline: "Full-Stack Development",
+    description: "Created web gradebook used by 13,000+ students across school district. Handles 50,000+ monthly requests and got 30% faster after adding Redis caching and database optimization.",
+    tech: ["React", "Node.js", "PostgreSQL", "Redis"],
+    metrics: ["13k+ users", "50k+ monthly requests", "30% performance gain"],
     gradient: "from-secondary to-accent",
-    year: "2023",
+    year: "2023 - 2025",
   },
 ];
 
@@ -72,7 +70,7 @@ const ProjectShowcase = () => {
             <span className="text-gradient">Featured Experiences</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Building impactful solutions across hardware, software, and research
+            Building AI-powered systems, backend infrastructure, and robotics solutions
           </p>
         </div>
 
@@ -117,7 +115,7 @@ const ProjectShowcase = () => {
                     <Badge
                       key={idx}
                       variant="secondary"
-                      className="text-xs bg-muted/50 hover:bg-muted transition-colors"
+                      className="text-xs bg-blue-500/20 text-blue-300 border border-blue-500/30 hover:bg-blue-500/30 transition-colors"
                     >
                       {tech}
                     </Badge>

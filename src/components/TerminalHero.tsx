@@ -71,13 +71,13 @@ const TerminalHero = () => {
                     <span className="text-secondary">→</span>
                     <div className="space-y-1">
                       <div className="text-foreground/90">
-                        <span className="text-primary">Role:</span> Full-Stack Engineer, Robotics Developer, Research Assistant
+                        <span className="text-primary">Role:</span> Systems Developer, AI Integrations, Robotics Researcher
                       </div>
                       <div className="text-foreground/90">
-                        <span className="text-primary">Specialty:</span> PCB Design · Web Dev · ML Integration · Team Leadership
+                        <span className="text-primary">Specialty:</span> Backend Systems · AI/LLM Integration · Embedded Systems · Automation
                       </div>
                       <div className="text-foreground/90">
-                        <span className="text-primary">Impact:</span> Served 40k+ users · Raised $50k+ · Ranked Top 2% Globally
+                        <span className="text-primary">Current:</span> Building AI tools · Working with ROS2 · Serving 500+ users
                       </div>
                     </div>
                   </div>

@@ -2,12 +2,12 @@ import { useEffect, useRef, useState } from "react";
 import { Card } from "@/components/ui/card";
 
 const stats = [
-  { label: "Users Impacted", value: 40000, suffix: "+", icon: "👥" },
-  { label: "Funding Raised", value: 50, suffix: "k", prefix: "$", icon: "💰" },
-  { label: "Global Ranking", value: 2, suffix: "%", prefix: "Top ", icon: "🏆" },
-  { label: "Championships", value: 7, suffix: "", icon: "🎯" },
-  { label: "Schools Served", value: 12, suffix: "+", icon: "🎓" },
-  { label: "Team Members Led", value: 25, suffix: "+", icon: "👨‍💼" },
+  { label: "Users Served", value: 13000, suffix: "+", icon: "👥" },
+  { label: "Daily Events Processed", value: 10000, suffix: "+", icon: "⚡" },
+  { label: "Concurrent Users", value: 500, suffix: "+", icon: "🔄" },
+  { label: "Performance Gains", value: 50, suffix: "%", icon: "📈" },
+  { label: "Cameras Deployed", value: 12, suffix: "", icon: "📹" },
+  { label: "Research Projects", value: 3, suffix: "", icon: "🔬" },
 ];
 
 const StatsCounter = () => {
@@ -41,7 +41,7 @@ const StatsCounter = () => {
             <span className="text-gradient">Impact by Numbers</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Measurable results across engineering and leadership
+            Building systems that scale and deliver real results
           </p>
         </div>
 
@@ -94,7 +94,7 @@ const StatCard = ({
     >
       <div className="text-4xl mb-2">{stat.icon}</div>
       <div className="text-2xl md:text-3xl font-bold text-gradient mb-1">
-        {stat.prefix}{count}{stat.suffix}
+        {stat.prefix}{count.toLocaleString()}{stat.suffix}
       </div>
       <div className="text-xs text-muted-foreground">{stat.label}</div>
     </Card>
