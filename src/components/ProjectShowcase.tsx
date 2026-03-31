@@ -13,7 +13,7 @@ const projects = [
     year: "Jan 2026 - Present",
   },
   {
-    title: "Qualcomm",
+    title: "Qualcomm & EIEC",
     tagline: "Systems Developer Intern",
     description: "Built scalable backend serving 500+ users with Python FastAPI and Docker. Set up automated CI/CD deployments cutting release time by 50% with zero downtime.",
     tech: ["Python", "FastAPI", "Docker", "AWS", "PostgreSQL"],
@@ -82,8 +82,8 @@ const ProjectShowcase = () => {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              {/* Gradient overlay */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
+              {/* Hover overlay */}
+              <div className="absolute inset-0 bg-primary opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
               
               <CardContent className="p-6 relative z-10">
                 <div className="mb-4">
@@ -115,7 +115,7 @@ const ProjectShowcase = () => {
                     <Badge
                       key={idx}
                       variant="secondary"
-                      className="text-xs bg-blue-500/20 text-blue-300 border border-blue-500/30 hover:bg-blue-500/30 transition-colors"
+                      className="text-xs bg-primary/15 text-primary/85 border border-primary/25 hover:bg-primary/25 transition-colors"
                     >
                       {tech}
                     </Badge>
@@ -130,4 +130,4 @@ const ProjectShowcase = () => {
   );
 };
 
-export default ProjectShowcase;
+export default ProjectShowcase; 

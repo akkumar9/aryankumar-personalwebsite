@@ -8,57 +8,56 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 240 10% 5%;
-    --foreground: 0 0% 98%;
+    --background: 222 22% 11%;
+    --foreground: 210 20% 93%;
 
-    --card: 240 8% 8%;
-    --card-foreground: 0 0% 98%;
+    --card: 222 20% 15%;
+    --card-foreground: 210 20% 93%;
 
-    --popover: 240 8% 8%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 222 20% 15%;
+    --popover-foreground: 210 20% 93%;
 
-    --primary: 280 90% 65%;
+    --primary: 224 65% 65%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 190 90% 55%;
-    --secondary-foreground: 240 10% 5%;
+    --secondary: 174 42% 52%;
+    --secondary-foreground: 222 22% 11%;
 
-    --muted: 240 8% 15%;
-    --muted-foreground: 240 5% 65%;
+    --muted: 222 16% 20%;
+    --muted-foreground: 220 12% 65%;
 
-    --accent: 340 85% 60%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 37 70% 56%;
+    --accent-foreground: 222 20% 6%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 70% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 8% 18%;
-    --input: 240 8% 18%;
-    --ring: 280 90% 65%;
+    --border: 222 16% 24%;
+    --input: 222 16% 24%;
+    --ring: 224 65% 62%;
 
     --radius: 1rem;
 
-    /* Vibrant gradient system */
-    --gradient-1: linear-gradient(135deg, hsl(280, 90%, 65%), hsl(340, 85%, 60%));
-    --gradient-2: linear-gradient(135deg, hsl(190, 90%, 55%), hsl(280, 90%, 65%));
-    --gradient-3: linear-gradient(135deg, hsl(340, 85%, 60%), hsl(50, 95%, 60%));
-    
-    /* Glow effects */
-    --glow-primary: 0 0 40px hsl(280 90% 65% / 0.5);
-    --glow-secondary: 0 0 40px hsl(190 90% 55% / 0.5);
-    --glow-accent: 0 0 40px hsl(340 85% 60% / 0.5);
-    
+    /* Refined gradient system */
+    --gradient-1: linear-gradient(135deg, hsl(224, 65%, 62%), hsl(174, 40%, 48%));
+    --gradient-2: linear-gradient(135deg, hsl(174, 40%, 48%), hsl(224, 65%, 62%));
+    --gradient-3: linear-gradient(135deg, hsl(224, 65%, 62%), hsl(37, 70%, 56%));
+
+    /* Subtle glow effects */
+    --glow-primary: 0 0 30px hsl(224 65% 62% / 0.22);
+    --glow-secondary: 0 0 30px hsl(174 40% 48% / 0.22);
+    --glow-accent: 0 0 30px hsl(37 70% 56% / 0.22);
+
     /* Mesh background */
-    --mesh-1: hsl(280, 90%, 65%);
-    --mesh-2: hsl(190, 90%, 55%);
-    --mesh-3: hsl(340, 85%, 60%);
+    --mesh-1: hsl(224, 65%, 62%);
+    --mesh-2: hsl(174, 40%, 48%);
+    --mesh-3: hsl(37, 70%, 56%);
   }
 }
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-1);
+    color: hsl(var(--primary));
   }
   
   .glow-primary {

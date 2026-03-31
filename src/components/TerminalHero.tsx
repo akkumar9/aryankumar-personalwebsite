@@ -22,12 +22,8 @@ const TerminalHero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated gradient mesh background */}
-      <div className="absolute inset-0 bg-background">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-primary/30 rounded-full blur-[100px] animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/30 rounded-full blur-[100px] animate-float" style={{ animationDelay: "1s" }}></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accent/20 rounded-full blur-[100px] animate-float" style={{ animationDelay: "2s" }}></div>
-      </div>
+      {/* Background */}
+      <div className="absolute inset-0 bg-background"></div>
 
       {/* Grid overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.05)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
@@ -39,8 +35,8 @@ const TerminalHero = () => {
             {/* Terminal Header */}
             <div className="bg-muted/50 px-4 py-3 flex items-center gap-2 border-b border-border">
               <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-[hsl(0,62%,52%)]"></div>
                 <div className="w-3 h-3 rounded-full bg-accent"></div>
-                <div className="w-3 h-3 rounded-full bg-[hsl(50,95%,60%)]"></div>
                 <div className="w-3 h-3 rounded-full bg-secondary"></div>
               </div>
               <span className="text-sm text-muted-foreground ml-4">terminal — bash</span>

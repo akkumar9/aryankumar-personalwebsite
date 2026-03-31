@@ -31,7 +31,7 @@ const timeline = [
   },
   {
     year: "Oct 2025",
-    title: "Qualcomm",
+    title: "Qualcomm & EIEC",
     subtitle: "Systems Developer Intern",
     description: "Built scalable backend with FastAPI and Docker serving 500+ users, implemented automated deployments cutting release time by 50%",
     type: "experience",
@@ -73,7 +73,7 @@ const Timeline = () => {
         </div>
         <div className="max-w-4xl mx-auto relative">
           {/* Timeline line */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-secondary to-accent"></div>
+          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border"></div>
           <div className="space-y-12">
             {timeline.map((item, index) => (
               <div

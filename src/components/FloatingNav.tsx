@@ -13,26 +13,36 @@ const FloatingNav = () => {
   const [activeSection, setActiveSection] = useState("top");
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = navItems.map(item => item.href.substring(1));
-      const currentSection = sections.find(section => {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          return rect.top <= 100 && rect.bottom >= 100;
-        }
-        return false;
-      });
-      
-      if (currentSection) {
-        setActiveSection(currentSection);
-      } else if (window.scrollY < 100) {
-        setActiveSection("top");
-      }
-    };
+    // Watch named sections with IntersectionObserver
+    const sectionIds = ["projects", "achievements", "contact"];
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      // Trigger when a section crosses the middle third of the viewport
+      { rootMargin: "-35% 0px -55% 0px", threshold: 0 }
+    );
+
+    sectionIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    // Fall back to "top" when near the top of the page
+    const handleScroll = () => {
+      if (window.scrollY < 200) setActiveSection("top");
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const scrollToSection = (href: string) => {
