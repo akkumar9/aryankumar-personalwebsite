@@ -67,13 +67,13 @@ const TerminalHero = () => {
                     <span className="text-secondary">→</span>
                     <div className="space-y-1">
                       <div className="text-foreground/90">
-                        <span className="text-primary">Role:</span> Systems Developer, AI Integrations, Robotics Researcher
+                        <span className="text-primary">Role:</span> Product Developer, Backend Engineer, Robotics Researcher
                       </div>
                       <div className="text-foreground/90">
-                        <span className="text-primary">Specialty:</span> Backend Systems · AI/LLM Integration · Embedded Systems · Automation
+                        <span className="text-primary">Specialty:</span> Backend Systems · AI Product Development · Embedded Systems · Automation
                       </div>
                       <div className="text-foreground/90">
-                        <span className="text-primary">Current:</span> Building AI tools · Working with ROS2 · Serving 500+ users
+                        <span className="text-primary">Current:</span> AI career platform @ Qualcomm Institute · Backend @ Automate365 · ROS2 research
                       </div>
                     </div>
                   </div>

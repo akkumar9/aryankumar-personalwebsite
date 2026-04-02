@@ -31,16 +31,16 @@ const timeline = [
   },
   {
     year: "Oct 2025",
-    title: "Qualcomm & EIEC",
-    subtitle: "Systems Developer Intern",
-    description: "Built scalable backend with FastAPI and Docker serving 500+ users, implemented automated deployments cutting release time by 50%",
+    title: "Qualcomm × EIEC",
+    subtitle: "Product Developer",
+    description: "Designed an AI career guidance platform for universities as B2B licensees, delivering personalized roadmaps to students at any stage of their academic or professional journey.",
     type: "experience",
   },
   {
     year: "Dec 2025",
     title: "Automate365",
-    subtitle: "AI Automation Systems Intern",
-    description: "Connected GPT-4 and Claude AI to CRMs, reducing manual workflow by 40-60%. Built systems processing 10,000+ daily events",
+    subtitle: "Backend Engineering Intern — Sole GitHub Integrator",
+    description: "Sole GitHub integrator for a 10-person team; built retry-hardened CRM artifact pushes and duplicate suppression, achieving 10/10 QA test cases with zero hallucinations.",
     type: "experience",
   },
   {
