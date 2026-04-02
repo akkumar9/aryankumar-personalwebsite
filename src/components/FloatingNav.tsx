@@ -4,8 +4,8 @@ import { Home, Briefcase, Trophy, Mail } from "lucide-react";
 
 const navItems = [
   { icon: Home, label: "Top", href: "#top" },
-  { icon: Briefcase, label: "Projects", href: "#projects" },
-  { icon: Trophy, label: "Achievements", href: "#achievements" },
+  { icon: Briefcase, label: "Experiences", href: "#projects" },
+  { icon: Trophy, label: "Timeline", href: "#achievements" },
   { icon: Mail, label: "Contact", href: "#contact" },
 ];
 
