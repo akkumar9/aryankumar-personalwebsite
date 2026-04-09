@@ -4,6 +4,15 @@ import { useState } from "react";
 
 const projects = [
   {
+    title: "UFC / Stream Enforcement",
+    tagline: "Backend Engineer — Anti-Piracy",
+    description: "Building a distributed web crawler processing 500K+ domains with Redis work queues and parallel workers, achieving 2,000+ pages/min and 92% piracy detection precision across 10K+ test cases.",
+    tech: ["Python", "Redis", "Distributed Systems", "Web Crawling", "DMCA Automation"],
+    metrics: ["500K+ domains crawled", "92% detection precision", "70% less manual review"],
+    gradient: "from-primary to-secondary",
+    year: "Apr 2026 - Present",
+  },
+  {
     title: "Existential Robotics Lab",
     tagline: "Autonomous Navigation Research",
     description: "Working with Prof. Atanasov on probabilistic navigation algorithms using Bayesian inference. Built real-time 3D mapping system with ROS2 achieving 15cm accuracy in GPS-denied environments.",

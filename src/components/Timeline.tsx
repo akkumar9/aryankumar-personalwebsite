@@ -51,6 +51,13 @@ const timeline = [
     type: "experience",
   },
   {
+    year: "Apr 2026",
+    title: "UFC / Stream Enforcement",
+    subtitle: "Backend Engineer — Anti-Piracy",
+    description: "Building a distributed web crawler processing 500K+ domains with Redis queues and parallel workers, achieving 92% piracy detection precision and automating DMCA workflows.",
+    type: "experience",
+  },
+  {
     year: "2028",
     title: "Expected Graduation",
     subtitle: "B.S. Computer Engineering",
