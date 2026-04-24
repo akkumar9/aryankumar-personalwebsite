@@ -120,9 +120,8 @@ const ProjectShowcase = () => {
                             className="text-xs font-bold px-2.5 py-0.5 rounded-full transition-all duration-300 cursor-default hover:scale-105"
                             style={{
                               color: c.color,
-                              backgroundColor: `${c.color}18`,
-                              border: `1px solid ${c.color}50`,
-                              boxShadow: `0 0 8px ${c.color}30`,
+                              backgroundColor: `${c.color}15`,
+                              border: `1px solid ${c.color}40`,
                             }}
                           >
                             {c.name}
