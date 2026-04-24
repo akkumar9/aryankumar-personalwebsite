@@ -105,7 +105,8 @@ const ProjectShowcase = () => {
                   </div>
                   <p className="text-sm font-semibold text-primary mb-2">{project.tagline}</p>
                   {"clients" in project && (
-                    <div className="flex flex-wrap gap-1.5 mb-3">
+                    <div className="flex flex-wrap items-center gap-1.5 mb-3">
+                      <span className="text-xs text-muted-foreground font-medium">Contracted by:</span>
                       {(project as typeof project & { clients: string[] }).clients.map((c, idx) => (
                         <span key={idx} className="text-xs font-semibold px-2 py-0.5 rounded-full bg-secondary/20 text-secondary border border-secondary/30">
                           {c}
