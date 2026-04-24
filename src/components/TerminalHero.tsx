@@ -73,7 +73,7 @@ const TerminalHero = () => {
                         <span className="text-primary">Specialty:</span> Backend Systems · AI Product Development · Embedded Systems · Automation
                       </div>
                       <div className="text-foreground/90">
-                        <span className="text-primary">Current:</span> Anti-piracy systems @ UFC · AI platform @ Qualcomm · Backend @ Automate365
+                        <span className="text-primary">Current:</span> Anti-piracy systems @ UFC · Backend platform @ Qualcomm · Backend @ Automate365
                       </div>
                     </div>
                   </div>

@@ -32,15 +32,15 @@ const timeline = [
   {
     year: "Oct 2025",
     title: "Qualcomm × EIEC",
-    subtitle: "Product Developer",
-    description: "Designed an AI career guidance platform for universities as B2B licensees, delivering personalized roadmaps to students at any stage of their academic or professional journey.",
+    subtitle: "Student Software Developer",
+    description: "Built and deployed a Python FastAPI backend for an internal research platform with 500+ registered users, JWT authentication, and GitHub Actions CI/CD with blue-green deployment reducing release cycles by ~50%.",
     type: "experience",
   },
   {
     year: "Dec 2025",
     title: "Automate365",
-    subtitle: "Backend Engineering Intern — Sole GitHub Integrator",
-    description: "Sole GitHub integrator for a 10-person team; built retry-hardened CRM artifact pushes and duplicate suppression, achieving 10/10 QA test cases with zero hallucinations.",
+    subtitle: "Backend Engineering Intern",
+    description: "Integrated GPT-4 with HubSpot and Salesforce CRMs to automate lead-qualification workflows; built a webhook ingestion service processing 10,000+ daily events with sub-200ms median response latency.",
     type: "experience",
   },
   {
@@ -52,9 +52,9 @@ const timeline = [
   },
   {
     year: "Apr 2026",
-    title: "UFC / Stream Enforcement",
-    subtitle: "Backend Engineer — Anti-Piracy",
-    description: "Building a distributed web crawler processing 500K+ domains with Redis queues and parallel workers, achieving 92% piracy detection precision and automating DMCA workflows.",
+    title: "Stream Enforcement LLC",
+    subtitle: "Disney · Netflix · UFC · Amazon · ESPN — Backend Engineer, Anti-Piracy",
+    description: "Building anti-piracy detection infrastructure for Disney, Netflix, UFC, Amazon, and ESPN; processing 500K+ domains using multi-signal detection (keyword, traffic, content fingerprinting) at 92% precision, automating DMCA workflows replacing offshore review teams.",
     type: "experience",
   },
   {
