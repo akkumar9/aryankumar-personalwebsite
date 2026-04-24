@@ -105,12 +105,16 @@ const ProjectShowcase = () => {
                   </div>
                   <p className="text-sm font-semibold text-primary mb-2">{project.tagline}</p>
                   {"clients" in project && (
-                    <p className="text-xs text-muted-foreground mb-3">
-                      for{" "}
-                      <span className="text-foreground/70 font-medium">
-                        {(project as typeof project & { clients: string[] }).clients.join(" · ")}
-                      </span>
-                    </p>
+                    <div className="mb-3">
+                      <p className="text-xs text-muted-foreground mb-1.5">Contracted for:</p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {(project as typeof project & { clients: string[] }).clients.map((c, idx) => (
+                          <span key={idx} className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-secondary/20 text-secondary border border-secondary/30">
+                            {c}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   )}
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                     {project.description}
