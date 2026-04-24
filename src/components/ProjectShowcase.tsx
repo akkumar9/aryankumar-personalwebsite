@@ -6,7 +6,8 @@ const projects = [
   {
     title: "Stream Enforcement LLC",
     tagline: "Backend Engineer — Anti-Piracy Detection",
-    description: "Building anti-piracy detection infrastructure contracted to Disney, Netflix, UFC, Amazon, and ESPN — processing 500K+ domains at 92% precision using keyword analysis, traffic pattern recognition, and content fingerprinting to automate DMCA takedowns and replace manual offshore review teams.",
+    clients: ["Disney", "Netflix", "UFC", "Amazon", "ESPN"],
+    description: "Building anti-piracy detection infrastructure processing 500K+ domains at 92% precision using keyword analysis, traffic pattern recognition, and content fingerprinting to automate DMCA takedowns and replace manual offshore review teams.",
     tech: ["Python", "Redis", "Distributed Systems", "Web Crawling", "DMCA Automation"],
     metrics: ["500K+ domains processed", "92% detection precision", "70% less manual review"],
     gradient: "from-primary to-secondary",
@@ -102,7 +103,16 @@ const ProjectShowcase = () => {
                     </h3>
                     <span className="text-xs text-muted-foreground">{project.year}</span>
                   </div>
-                  <p className="text-sm font-semibold text-primary mb-3">{project.tagline}</p>
+                  <p className="text-sm font-semibold text-primary mb-2">{project.tagline}</p>
+                  {"clients" in project && (
+                    <div className="flex flex-wrap gap-1.5 mb-3">
+                      {(project as typeof project & { clients: string[] }).clients.map((c, idx) => (
+                        <span key={idx} className="text-xs font-semibold px-2 py-0.5 rounded-full bg-secondary/20 text-secondary border border-secondary/30">
+                          {c}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                     {project.description}
                   </p>
