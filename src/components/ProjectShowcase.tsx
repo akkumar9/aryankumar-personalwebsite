@@ -6,7 +6,13 @@ const projects = [
   {
     title: "Stream Enforcement LLC",
     tagline: "Backend Engineer — Anti-Piracy Detection",
-    clients: ["Disney", "Netflix", "UFC", "Amazon", "ESPN"],
+    clients: [
+      { name: "Disney", color: "#006eff" },
+      { name: "Netflix", color: "#e50914" },
+      { name: "UFC", color: "#d4a017" },
+      { name: "Amazon", color: "#ff9900" },
+      { name: "ESPN", color: "#cc0000" },
+    ],
     description: "Building anti-piracy detection infrastructure processing 500K+ domains at 92% precision using keyword analysis, traffic pattern recognition, and content fingerprinting to automate DMCA takedowns and replace manual offshore review teams.",
     tech: ["Python", "Redis", "Distributed Systems", "Web Crawling", "DMCA Automation"],
     metrics: ["500K+ domains processed", "92% detection precision", "70% less manual review"],
@@ -108,9 +114,18 @@ const ProjectShowcase = () => {
                     <div className="mb-3">
                       <p className="text-xs text-muted-foreground mb-1.5">Contracted for:</p>
                       <div className="flex flex-wrap gap-1.5">
-                        {(project as typeof project & { clients: string[] }).clients.map((c, idx) => (
-                          <span key={idx} className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-secondary/20 text-secondary border border-secondary/30">
-                            {c}
+                        {(project as typeof project & { clients: { name: string; color: string }[] }).clients.map((c, idx) => (
+                          <span
+                            key={idx}
+                            className="text-xs font-bold px-2.5 py-0.5 rounded-full transition-all duration-300 cursor-default hover:scale-105"
+                            style={{
+                              color: c.color,
+                              backgroundColor: `${c.color}18`,
+                              border: `1px solid ${c.color}50`,
+                              boxShadow: `0 0 8px ${c.color}30`,
+                            }}
+                          >
+                            {c.name}
                           </span>
                         ))}
                       </div>
