@@ -104,15 +104,15 @@ const ProjectShowcase = () => {
               <CardContent className="p-6 relative z-10">
                 <div className="mb-4">
                   <div className="flex items-start justify-between mb-2">
-                    <h3 className="text-xl font-bold text-foreground group-hover:text-gradient transition-all">
+                    <h3 className="text-lg font-bold text-foreground group-hover:text-gradient transition-all leading-snug">
                       {project.title}
                     </h3>
-                    <span className="text-xs text-muted-foreground">{project.year}</span>
+                    <span className="text-xs text-muted-foreground whitespace-nowrap ml-3 mt-0.5">{project.year}</span>
                   </div>
                   <p className="text-sm font-semibold text-primary mb-2">{project.tagline}</p>
                   {"clients" in project && (
                     <div className="mb-3">
-                      <p className="text-xs text-muted-foreground mb-1.5">Contracted for:</p>
+                      <p className="text-sm font-semibold text-foreground/60 mb-2">Contracted for:</p>
                       <div className="flex flex-wrap gap-1.5">
                         {(project as typeof project & { clients: { name: string; color: string }[] }).clients.map((c, idx) => (
                           <span
