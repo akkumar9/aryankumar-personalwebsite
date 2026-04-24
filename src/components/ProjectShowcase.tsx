@@ -4,8 +4,8 @@ import { useState } from "react";
 
 const projects = [
   {
-    title: "Stream Enforcement LLC",
-    tagline: "Backend Engineer — Anti-Piracy Detection",
+    title: "Anti-Piracy Detection System",
+    tagline: "Backend Engineer — Stream Enforcement LLC",
     clients: [
       { name: "Disney", color: "#006eff" },
       { name: "Netflix", color: "#e50914" },
