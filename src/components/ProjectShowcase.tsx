@@ -5,7 +5,7 @@ import { useState } from "react";
 const projects = [
   {
     title: "Stream Enforcement LLC",
-    tagline: "Disney · Netflix · UFC · Amazon · ESPN  |  Backend Engineer — Anti-Piracy",
+    tagline: "Backend Engineer — Anti-Piracy Detection",
     description: "Building anti-piracy detection infrastructure contracted to Disney, Netflix, UFC, Amazon, and ESPN — processing 500K+ domains at 92% precision using keyword analysis, traffic pattern recognition, and content fingerprinting to automate DMCA takedowns and replace manual offshore review teams.",
     tech: ["Python", "Redis", "Distributed Systems", "Web Crawling", "DMCA Automation"],
     metrics: ["500K+ domains processed", "92% detection precision", "70% less manual review"],
