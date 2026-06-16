@@ -54,7 +54,7 @@ const timeline = [
     year: "Apr 2026",
     title: "Stream Enforcement LLC",
     subtitle: "Backend Engineer — Anti-Piracy Detection",
-    description: "Building anti-piracy detection infrastructure for Disney, Netflix, UFC, Amazon, and ESPN; processing 500K+ domains using multi-signal detection (keyword, traffic, content fingerprinting) at 92% precision, automating DMCA workflows replacing offshore review teams.",
+    description: "Building anti-piracy detection infrastructure for Paramount and UFC; processing 500K+ domains using multi-signal detection (keyword, traffic, content fingerprinting) at 92% precision, automating DMCA workflows replacing offshore review teams.",
     type: "experience",
   },
   {

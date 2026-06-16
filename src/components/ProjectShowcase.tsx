@@ -7,11 +7,8 @@ const projects = [
     title: "Anti-Piracy Detection System",
     tagline: "Backend Engineer — Stream Enforcement LLC",
     clients: [
-      { name: "Disney", color: "#006eff" },
-      { name: "Netflix", color: "#e50914" },
+      { name: "Paramount", color: "#0064ff" },
       { name: "UFC", color: "#d4a017" },
-      { name: "Amazon", color: "#ff9900" },
-      { name: "ESPN", color: "#cc0000" },
     ],
     description: "Building anti-piracy detection infrastructure processing 500K+ domains at 92% precision using keyword analysis, traffic pattern recognition, and content fingerprinting to automate DMCA takedowns and replace manual offshore review teams.",
     tech: ["Python", "Redis", "Distributed Systems", "Web Crawling", "DMCA Automation"],
