@@ -1,13 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import { Card } from "@/components/ui/card";
 
 const stats = [
-  { label: "Users Served", value: 13000, suffix: "+", icon: "👥" },
-  { label: "Daily Events Processed", value: 10000, suffix: "+", icon: "⚡" },
-  { label: "Concurrent Users", value: 500, suffix: "+", icon: "🔄" },
-  { label: "Performance Gains", value: 50, suffix: "%", icon: "📈" },
-  { label: "Cameras Deployed", value: 12, suffix: "", icon: "📹" },
-  { label: "Research Projects", value: 3, suffix: "", icon: "🔬" },
+  { label: "Users served", value: 13000, suffix: "+" },
+  { label: "Daily events processed", value: 10000, suffix: "+" },
+  { label: "Concurrent users", value: 500, suffix: "+" },
+  { label: "Performance gains", value: 50, suffix: "%" },
+  { label: "Cameras deployed", value: 12, suffix: "" },
+  { label: "Research projects", value: 3, suffix: "" },
 ];
 
 const StatsCounter = () => {
@@ -32,22 +31,11 @@ const StatsCounter = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background"></div>
-      
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-gradient">Impact by Numbers</span>
-          </h2>
-          <p className="text-muted-foreground text-lg">
-            Building systems that scale and deliver real results
-          </p>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-7xl mx-auto">
+    <section ref={sectionRef} className="py-14 border-y border-border">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-6 gap-y-8 max-w-6xl mx-auto">
           {stats.map((stat, index) => (
-            <StatCard key={index} stat={stat} isVisible={isVisible} delay={index * 100} />
+            <StatCard key={index} stat={stat} isVisible={isVisible} />
           ))}
         </div>
       </div>
@@ -55,22 +43,20 @@ const StatsCounter = () => {
   );
 };
 
-const StatCard = ({ 
-  stat, 
-  isVisible, 
-  delay 
-}: { 
-  stat: typeof stats[0]; 
-  isVisible: boolean; 
-  delay: number;
+const StatCard = ({
+  stat,
+  isVisible,
+}: {
+  stat: (typeof stats)[0];
+  isVisible: boolean;
 }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
     if (!isVisible) return;
 
-    const duration = 2000;
-    const steps = 60;
+    const duration = 1200;
+    const steps = 40;
     const increment = stat.value / steps;
     let current = 0;
 
@@ -88,16 +74,13 @@ const StatCard = ({
   }, [isVisible, stat.value]);
 
   return (
-    <Card 
-      className="p-6 bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 hover:scale-105 hover:glow-primary"
-      style={{ animationDelay: `${delay}ms` }}
-    >
-      <div className="text-4xl mb-2">{stat.icon}</div>
-      <div className="text-2xl md:text-3xl font-bold text-gradient mb-1">
-        {stat.prefix}{count.toLocaleString()}{stat.suffix}
+    <div className="border-l border-border pl-4">
+      <div className="font-mono text-2xl md:text-3xl font-semibold text-foreground tabular-nums">
+        {count.toLocaleString()}
+        {stat.suffix}
       </div>
-      <div className="text-xs text-muted-foreground">{stat.label}</div>
-    </Card>
+      <div className="text-xs text-muted-foreground mt-1">{stat.label}</div>
+    </div>
   );
 };
 

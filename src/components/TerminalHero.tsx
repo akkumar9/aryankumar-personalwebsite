@@ -5,7 +5,7 @@ import { ChevronDown } from "lucide-react";
 const TerminalHero = () => {
   const [displayText, setDisplayText] = useState("");
   const fullText = "aryan@ucsd:~$ whoami";
-  
+
   useEffect(() => {
     let i = 0;
     const timer = setInterval(() => {
@@ -16,101 +16,99 @@ const TerminalHero = () => {
         clearInterval(timer);
       }
     }, 100);
-    
+
     return () => clearInterval(timer);
   }, []);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0 bg-background"></div>
-
-      {/* Grid overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.05)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.035)_1px,transparent_1px)] bg-[size:48px_48px]"></div>
 
       <div className="container mx-auto px-6 py-20 relative z-10">
-        <div className="max-w-5xl mx-auto">
-          {/* Terminal Window */}
-          <div className="bg-card/50 backdrop-blur-xl rounded-2xl border border-border shadow-2xl overflow-hidden animate-scale-in">
-            {/* Terminal Header */}
-            <div className="bg-muted/50 px-4 py-3 flex items-center gap-2 border-b border-border">
+        <div className="max-w-3xl mx-auto">
+          <div className="bg-card rounded-lg border border-border shadow-2xl overflow-hidden animate-scale-in">
+            <div className="bg-secondary px-4 py-3 flex items-center gap-2 border-b border-border">
               <div className="flex gap-2">
-                <div className="w-3 h-3 rounded-full bg-[hsl(0,62%,52%)]"></div>
-                <div className="w-3 h-3 rounded-full bg-accent"></div>
-                <div className="w-3 h-3 rounded-full bg-secondary"></div>
+                <div className="w-3 h-3 rounded-full bg-[hsl(0,55%,48%)]"></div>
+                <div className="w-3 h-3 rounded-full bg-primary"></div>
+                <div className="w-3 h-3 rounded-full bg-[hsl(140,35%,42%)]"></div>
               </div>
-              <span className="text-sm text-muted-foreground ml-4">terminal — bash</span>
+              <span className="font-mono text-xs text-muted-foreground ml-3">zsh</span>
             </div>
 
-            {/* Terminal Content */}
             <div className="p-8 font-mono">
-              <div className="text-secondary mb-4">
+              <div className="text-primary mb-4">
                 {displayText}
-                <span className="animate-blink border-r-2 border-secondary ml-1"></span>
+                <span className="animate-blink border-r-2 border-primary ml-1"></span>
               </div>
 
               {displayText === fullText && (
-                <div className="space-y-4 animate-fade-in">
-                  <div className="flex items-start gap-4">
-                    <span className="text-primary">→</span>
-                    <div>
-                      <div className="text-xl md:text-3xl font-bold mb-2">
-                        <span className="text-gradient">Aryan Kumar</span>
-                      </div>
-                      <div className="text-muted-foreground">
-                        Computer Engineering @ UC San Diego · Jacobs Scholar
-                      </div>
+                <div className="space-y-5 animate-fade-in">
+                  <div>
+                    <div className="text-2xl md:text-4xl font-semibold text-foreground mb-2 tracking-tight">
+                      Aryan Kumar
+                    </div>
+                    <div className="text-muted-foreground text-sm md:text-base">
+                      Computer engineering @ UC San Diego · Jacobs Scholar
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4 text-sm md:text-base">
-                    <span className="text-secondary">→</span>
-                    <div className="space-y-1">
-                      <div className="text-foreground/90">
-                        <span className="text-primary">Role:</span> Product Developer, Backend Engineer, Robotics Researcher
-                      </div>
-                      <div className="text-foreground/90">
-                        <span className="text-primary">Specialty:</span> Backend Systems · AI Product Development · Embedded Systems · Automation
-                      </div>
-                      <div className="text-foreground/90">
-                        <span className="text-primary">Current:</span> Anti-piracy systems @ UFC · Backend platform @ Qualcomm · Backend @ Automate365
-                      </div>
+                  <div className="text-sm md:text-base space-y-1.5 border-l-2 border-border pl-4">
+                    <div className="text-foreground/85">
+                      <span className="text-primary">role</span>{" "}
+                      <span className="text-muted-foreground">·</span>{" "}
+                      product developer, backend engineer, robotics researcher
+                    </div>
+                    <div className="text-foreground/85">
+                      <span className="text-primary">focus</span>{" "}
+                      <span className="text-muted-foreground">·</span>{" "}
+                      backend systems, applied AI, embedded systems
+                    </div>
+                    <div className="text-foreground/85">
+                      <span className="text-primary">right now</span>{" "}
+                      <span className="text-muted-foreground">·</span>{" "}
+                      anti-piracy systems at UFC, backend platform work at
+                      Qualcomm, backend at Automate365
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4 pt-6">
-                    <span className="text-accent">→</span>
-                    <div className="flex flex-wrap gap-3">
-                      <Button
-                        size="lg"
-                        className="bg-primary hover:bg-primary/90 glow-primary transition-all"
-                        onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
-                      >
-                        View Experiences
-                      </Button>
-                      <Button
-                        size="lg"
-                        variant="outline"
-                        className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground"
-                        onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-                      >
-                        Get In Touch
-                      </Button>
-                    </div>
+                  <div className="flex flex-wrap gap-3 pt-4">
+                    <Button
+                      size="lg"
+                      className="bg-primary text-primary-foreground hover:bg-primary/90"
+                      onClick={() =>
+                        document
+                          .getElementById("projects")
+                          ?.scrollIntoView({ behavior: "smooth" })
+                      }
+                    >
+                      See what I've built
+                    </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-border text-foreground hover:bg-secondary"
+                      onClick={() =>
+                        document
+                          .getElementById("contact")
+                          ?.scrollIntoView({ behavior: "smooth" })
+                      }
+                    >
+                      Get in touch
+                    </Button>
                   </div>
 
-                  <div className="flex items-start gap-4 text-xs text-muted-foreground pt-4">
-                    <span>→</span>
-                    <div>Open for opportunities · San Diego, CA</div>
+                  <div className="text-xs text-muted-foreground pt-2 font-mono">
+                    open to summer 2026 internships · San Diego, CA
                   </div>
                 </div>
               )}
             </div>
           </div>
 
-          {/* Scroll Indicator */}
           <div className="flex justify-center mt-12 animate-bounce">
-            <ChevronDown className="h-8 w-8 text-muted-foreground" />
+            <ChevronDown className="h-6 w-6 text-muted-foreground" />
           </div>
         </div>
       </div>

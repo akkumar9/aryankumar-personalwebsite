@@ -2,82 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Design tokens. One accent color, neutral everything else. All colors HSL. */
 
 @layer base {
   :root {
-    --background: 222 22% 11%;
-    --foreground: 210 20% 93%;
+    --background: 30 8% 6%;
+    --foreground: 32 18% 92%;
 
-    --card: 222 20% 15%;
-    --card-foreground: 210 20% 93%;
+    --card: 30 8% 10%;
+    --card-foreground: 32 18% 92%;
 
-    --popover: 222 20% 15%;
-    --popover-foreground: 210 20% 93%;
+    --popover: 30 8% 10%;
+    --popover-foreground: 32 18% 92%;
 
-    --primary: 224 65% 65%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 28 88% 58%;
+    --primary-foreground: 30 20% 8%;
 
-    --secondary: 174 42% 52%;
-    --secondary-foreground: 222 22% 11%;
+    --secondary: 30 6% 15%;
+    --secondary-foreground: 32 14% 88%;
 
-    --muted: 222 16% 20%;
-    --muted-foreground: 220 12% 65%;
+    --muted: 30 6% 13%;
+    --muted-foreground: 30 8% 58%;
 
-    --accent: 37 70% 56%;
-    --accent-foreground: 222 20% 6%;
+    --accent: 30 6% 17%;
+    --accent-foreground: 32 18% 92%;
 
-    --destructive: 0 70% 55%;
+    --destructive: 6 65% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 222 16% 24%;
-    --input: 222 16% 24%;
-    --ring: 224 65% 62%;
+    --border: 30 8% 19%;
+    --input: 30 8% 19%;
+    --ring: 28 88% 58%;
 
-    --radius: 1rem;
-
-    /* Refined gradient system */
-    --gradient-1: linear-gradient(135deg, hsl(224, 65%, 62%), hsl(174, 40%, 48%));
-    --gradient-2: linear-gradient(135deg, hsl(174, 40%, 48%), hsl(224, 65%, 62%));
-    --gradient-3: linear-gradient(135deg, hsl(224, 65%, 62%), hsl(37, 70%, 56%));
-
-    /* Subtle glow effects */
-    --glow-primary: 0 0 30px hsl(224 65% 62% / 0.22);
-    --glow-secondary: 0 0 30px hsl(174 40% 48% / 0.22);
-    --glow-accent: 0 0 30px hsl(37 70% 56% / 0.22);
-
-    /* Mesh background */
-    --mesh-1: hsl(224, 65%, 62%);
-    --mesh-2: hsl(174, 40%, 48%);
-    --mesh-3: hsl(37, 70%, 56%);
-  }
-}
-
-@layer utilities {
-  .text-gradient {
-    color: hsl(var(--primary));
-  }
-  
-  .glow-primary {
-    box-shadow: var(--glow-primary);
-  }
-  
-  .glow-secondary {
-    box-shadow: var(--glow-secondary);
-  }
-  
-  .glow-accent {
-    box-shadow: var(--glow-accent);
-  }
-  
-  .perspective-1000 {
-    perspective: 1000px;
-  }
-  
-  .preserve-3d {
-    transform-style: preserve-3d;
+    --radius: 0.5rem;
   }
 }
 
@@ -88,5 +45,18 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "cv11", "ss01";
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.3);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer utilities {
+  /* Section eyebrow number, e.g. "01" before a heading */
+  .section-index {
+    @apply font-mono text-sm text-primary;
   }
 }

@@ -55,26 +55,26 @@ const FloatingNav = () => {
 
   return (
     <nav className="fixed top-1/2 right-8 -translate-y-1/2 z-50 hidden lg:block">
-      <div className="flex flex-col gap-4 bg-card/50 backdrop-blur-xl rounded-full border border-border p-3 shadow-lg">
+      <div className="flex flex-col gap-3 bg-card rounded-full border border-border p-2.5 shadow-lg">
         {navItems.map((item) => {
           const Icon = item.icon;
           const isActive = activeSection === item.href.substring(1);
-          
+
           return (
             <button
               key={item.href}
               onClick={() => scrollToSection(item.href)}
-              className={`group relative p-3 rounded-full transition-all duration-300 ${
-                isActive 
-                  ? "bg-primary text-primary-foreground glow-primary" 
-                  : "hover:bg-muted text-muted-foreground hover:text-foreground"
+              className={`group relative p-2.5 rounded-full transition-colors duration-200 ${
+                isActive
+                  ? "bg-primary text-primary-foreground"
+                  : "hover:bg-secondary text-muted-foreground hover:text-foreground"
               }`}
               title={item.label}
             >
-              <Icon className="h-5 w-5" />
-              
+              <Icon className="h-4 w-4" />
+
               {/* Tooltip */}
-              <span className="absolute right-full mr-4 px-3 py-1.5 bg-card border border-border rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+              <span className="absolute right-full mr-4 px-3 py-1.5 bg-card border border-border rounded-md text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                 {item.label}
               </span>
             </button>
