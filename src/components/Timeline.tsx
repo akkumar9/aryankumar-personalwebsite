@@ -30,7 +30,7 @@ const timeline = [
     title: "UC Davis ECE Department",
     subtitle: "Embedded systems engineer",
     description:
-      "Wrote C/C++ firmware for STM32 medical devices — 20% longer battery life, sub-1ms alert response.",
+      "Wrote C/C++ firmware for STM32 medical devices, getting 20% longer battery life with sub-1ms alert response.",
     type: "experience",
   },
   {
@@ -54,7 +54,7 @@ const timeline = [
     title: "Existential Robotics Lab",
     subtitle: "Undergraduate researcher",
     description:
-      "Working on probabilistic navigation with ROS2 — 15cm position accuracy in GPS-denied environments.",
+      "Working on probabilistic navigation with ROS2, hitting 15cm position accuracy in GPS-denied environments.",
     type: "experience",
   },
   {

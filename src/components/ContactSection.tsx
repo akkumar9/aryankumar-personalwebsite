@@ -1,7 +1,11 @@
 import SectionPrompt from "./SectionPrompt";
 
 const fields: { key: string; value: string; href?: string }[] = [
-  { key: "email", value: "ark009@ucsd.edu", href: "mailto:ark009@ucsd.edu" },
+  {
+    key: "email",
+    value: "mail.to.aryankumar@gmail.com",
+    href: "mailto:mail.to.aryankumar@gmail.com",
+  },
   {
     key: "linkedin",
     value: "aryan-kumar-85b444265",
@@ -25,7 +29,7 @@ const ContactSection = () => {
           <p className="text-muted-foreground mb-8 max-w-lg">
             Studying computer engineering at UCSD, working on AI integrations,
             backend systems, and robotics research. Reach out if you're hiring
-            for LLM applications, systems work, or autonomous systems — or if
+            for LLM applications, systems work, or autonomous systems, or if
             you just want to talk shop.
           </p>
 

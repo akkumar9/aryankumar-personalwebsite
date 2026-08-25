@@ -5,7 +5,7 @@ import SectionPrompt from "./SectionPrompt";
 const projects = [
   {
     title: "Anti-Piracy Detection System",
-    tagline: "Backend Engineer — Stream Enforcement LLC",
+    tagline: "Backend Engineer, Stream Enforcement LLC",
     clients: [
       { name: "Paramount", color: "#0064ff" },
       { name: "UFC", color: "#d4a017" },
@@ -17,8 +17,8 @@ const projects = [
   },
   {
     title: "Existential Robotics Lab",
-    tagline: "Undergraduate Researcher — Prof. Atanasov, UC San Diego",
-    description: "Doing robotics research focused on autonomous navigation in GPS-denied environments. I built a 3D mapping pipeline fusing LiDAR and RGB-D camera data with ROS2, hitting sub-15cm localization accuracy indoors. Also profiled and restructured the pose-graph optimization to cut runtime by ~35% — that was the key to getting it running in real time on embedded hardware.",
+    tagline: "Undergraduate Researcher, Prof. Atanasov, UC San Diego",
+    description: "Doing robotics research focused on autonomous navigation in GPS-denied environments. I built a 3D mapping pipeline fusing LiDAR and RGB-D camera data with ROS2, hitting sub-15cm localization accuracy indoors. Also profiled and restructured the pose-graph optimization to cut runtime by ~35%, which was the key to getting it running in real time on embedded hardware.",
     tech: ["Python", "C++", "ROS2", "SLAM", "LiDAR", "Sensor Fusion"],
     metrics: ["Sub-15cm localization accuracy", "~35% faster pose-graph optimization", "Real-time on embedded hardware"],
     year: "Jan 2026 - Present",
