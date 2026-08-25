@@ -48,16 +48,16 @@ const StatusBar = () => {
   };
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 h-12 border-b border-border bg-background flex items-center px-6">
+    <header className="fixed top-0 inset-x-0 z-50 h-12 border-b border-border bg-background grid grid-cols-[1fr_auto_1fr] items-center px-6">
       <button
         onClick={() => scrollToSection("#top")}
-        className="flex items-center gap-2 font-mono text-sm shrink-0"
+        className="flex items-center gap-2 font-mono text-sm shrink-0 justify-self-start"
       >
         <span className="w-2 h-2 rounded-full bg-primary animate-pulse shrink-0" />
         <span className="text-foreground">aryan@ucsd</span>
       </button>
 
-      <nav className="hidden md:flex items-center gap-8 mx-auto font-mono text-sm">
+      <nav className="hidden md:flex items-center gap-8 justify-self-center font-mono text-sm">
         {navItems.map((item) => {
           const isActive = activeSection === item.href.substring(1);
           return (
@@ -74,7 +74,7 @@ const StatusBar = () => {
         })}
       </nav>
 
-      <div className="ml-auto font-mono text-xs text-muted-foreground hidden sm:block">
+      <div className="justify-self-end font-mono text-xs text-muted-foreground hidden sm:block">
         San Diego, CA
       </div>
     </header>
