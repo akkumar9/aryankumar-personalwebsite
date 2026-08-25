@@ -96,7 +96,7 @@ const ProjectShowcase = () => {
                           (name, idx) => (
                             <span
                               key={idx}
-                              className="text-xs font-bold px-2.5 py-0.5 rounded bg-primary/15 text-primary/85 border border-primary/25 cursor-default"
+                              className="text-xs font-bold px-2.5 py-0.5 rounded bg-[hsl(var(--client-accent)/0.15)] text-[hsl(var(--client-accent))] border border-[hsl(var(--client-accent)/0.35)] cursor-default"
                             >
                               {name}
                             </span>

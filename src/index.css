@@ -18,6 +18,9 @@
     --primary: 142 68% 50%;
     --primary-foreground: 0 0% 5%;
 
+    /* Scoped accent for client name tags only, not a second site-wide color */
+    --client-accent: 266 70% 70%;
+
     --secondary: 0 0% 12%;
     --secondary-foreground: 0 0% 88%;
 
