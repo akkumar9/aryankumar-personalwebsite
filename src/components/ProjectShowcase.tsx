@@ -6,10 +6,7 @@ const projects = [
   {
     title: "Anti-Piracy Detection System",
     tagline: "Backend Engineer, 451 Degrees, LLC (contracted to Stream Enforcement)",
-    clients: [
-      { name: "Paramount", color: "#0064ff" },
-      { name: "UFC", color: "#d4a017" },
-    ],
+    clients: ["Paramount", "UFC"],
     description: "Building anti-piracy detection infrastructure processing 500K+ domains at 92% precision using keyword analysis, traffic pattern recognition, and content fingerprinting to automate DMCA takedowns and replace manual offshore review teams.",
     tech: ["Python", "Redis", "Distributed Systems", "Web Crawling", "DMCA Automation"],
     metrics: ["500K+ domains processed", "92% detection precision", "70% less manual review"],
@@ -91,21 +88,20 @@ const ProjectShowcase = () => {
                   <p className="text-sm font-semibold text-primary mb-2">{project.tagline}</p>
                   {"clients" in project && (
                     <div className="mb-3">
-                      <p className="text-xs font-medium text-muted-foreground mb-2">Contracted for</p>
+                      <p className="text-xs font-medium text-muted-foreground mb-2">
+                        Clients include
+                      </p>
                       <div className="flex flex-wrap gap-1.5">
-                        {(project as typeof project & { clients: { name: string; color: string }[] }).clients.map((c, idx) => (
-                          <span
-                            key={idx}
-                            className="text-xs font-bold px-2.5 py-0.5 rounded cursor-default"
-                            style={{
-                              color: c.color,
-                              backgroundColor: `${c.color}15`,
-                              border: `1px solid ${c.color}40`,
-                            }}
-                          >
-                            {c.name}
-                          </span>
-                        ))}
+                        {(project as typeof project & { clients: string[] }).clients.map(
+                          (name, idx) => (
+                            <span
+                              key={idx}
+                              className="text-xs font-bold px-2.5 py-0.5 rounded bg-primary/15 text-primary/85 border border-primary/25 cursor-default"
+                            >
+                              {name}
+                            </span>
+                          )
+                        )}
                       </div>
                     </div>
                   )}
