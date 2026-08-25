@@ -77,8 +77,8 @@ const Timeline = () => {
   return (
     <section id="achievements" className="py-20">
       <div className="container mx-auto px-6">
-        <div className="mb-12 max-w-2xl">
-          <div className="flex items-baseline gap-3 mb-3">
+        <div className="mb-12 max-w-2xl mx-auto text-center">
+          <div className="flex items-baseline justify-center gap-3 mb-3">
             <span className="section-index">02</span>
             <h2 className="font-mono text-2xl md:text-3xl font-semibold tracking-tight text-foreground">
               Timeline
