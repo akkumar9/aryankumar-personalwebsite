@@ -18,14 +18,6 @@ const timeline = [
     type: "experience",
   },
   {
-    year: "2024",
-    title: "Started at UC San Diego",
-    subtitle: "Jacobs Scholar",
-    description:
-      "Began Computer Engineering as a Jacobs Scholar, UCSD's top scholarship for incoming engineers.",
-    type: "education",
-  },
-  {
     year: "Jul 2024",
     title: "UC Davis ECE Department",
     subtitle: "Embedded systems engineer",
@@ -34,11 +26,19 @@ const timeline = [
     type: "experience",
   },
   {
+    year: "Sep 2025",
+    title: "Started at UC San Diego",
+    subtitle: "Jacobs Scholar",
+    description:
+      "Began Computer Engineering as a Jacobs Scholar, 1 of 10 selected from 1,500+ engineering applicants for the full-tuition scholarship.",
+    type: "education",
+  },
+  {
     year: "Oct 2025",
     title: "Qualcomm × EIEC",
-    subtitle: "Student software developer",
+    subtitle: "Product developer, AI career platform",
     description:
-      "Shipped a FastAPI backend for an internal research platform with 500+ users, JWT auth, and a blue-green CI/CD pipeline that cut release time by ~50%.",
+      "Developing go-to-market strategy and a B2B licensing model for an AI career platform targeting 5,000+ UCSD students.",
     type: "experience",
   },
   {
@@ -46,7 +46,7 @@ const timeline = [
     title: "Automate365",
     subtitle: "Backend engineering intern",
     description:
-      "Wired GPT-4 into HubSpot and Salesforce to automate lead qualification. Built a webhook service handling 10,000+ events/day at sub-200ms latency.",
+      "Built a webhook service handling 10,000+ events/day at sub-200ms latency, and served as the team's sole GitHub/CI owner.",
     type: "experience",
   },
   {
@@ -54,7 +54,7 @@ const timeline = [
     title: "Existential Robotics Lab",
     subtitle: "Undergraduate researcher",
     description:
-      "Worked on probabilistic navigation with ROS2, hitting 15cm position accuracy in GPS-denied environments.",
+      "Learned ROS2 and the lab's robotics stack, then implemented and tested A* pathfinding algorithms as part of onboarding.",
     type: "experience",
   },
   {
@@ -62,7 +62,7 @@ const timeline = [
     title: "451 Degrees, LLC",
     subtitle: "Backend engineer, contracted to Stream Enforcement",
     description:
-      "Building anti-piracy infrastructure for Stream Enforcement's clients, Paramount and UFC. 500K+ domains, 92% precision, replacing offshore manual review.",
+      "Built a multi-signal URL ranking engine and a Telegram scraper monitoring 44+ piracy channels for Stream Enforcement's clients, Paramount and UFC.",
     type: "experience",
   },
   {
