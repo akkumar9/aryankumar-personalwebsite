@@ -5,7 +5,7 @@ import SectionPrompt from "./SectionPrompt";
 const projects = [
   {
     title: "Anti-Piracy Detection System",
-    tagline: "Backend Engineer, Stream Enforcement LLC",
+    tagline: "Backend Engineer, 451 Degrees, LLC (contracted to Stream Enforcement)",
     clients: [
       { name: "Paramount", color: "#0064ff" },
       { name: "UFC", color: "#d4a017" },

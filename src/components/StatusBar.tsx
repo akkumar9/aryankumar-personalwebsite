@@ -74,8 +74,8 @@ const StatusBar = () => {
         })}
       </nav>
 
-      <div className="justify-self-end font-mono text-xs text-muted-foreground hidden sm:block">
-        San Diego, CA
+      <div className="justify-self-end font-mono text-xs text-muted-foreground hidden lg:block">
+        San Diego / Bay Area, CA
       </div>
     </header>
   );

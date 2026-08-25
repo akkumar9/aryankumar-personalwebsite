@@ -12,7 +12,7 @@ const fields: { key: string; value: string; href?: string }[] = [
     href: "https://linkedin.com/in/aryan-kumar-85b444265",
   },
   { key: "github", value: "akkumar9", href: "https://github.com/akkumar9" },
-  { key: "location", value: "San Diego, CA" },
+  { key: "location", value: "San Diego / Bay Area, CA" },
   { key: "status", value: "open to internships starting winter 2027" },
 ];
 

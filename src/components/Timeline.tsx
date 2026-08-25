@@ -59,10 +59,10 @@ const timeline = [
   },
   {
     year: "Apr 2026",
-    title: "Stream Enforcement LLC",
-    subtitle: "Backend engineer, anti-piracy detection",
+    title: "451 Degrees, LLC",
+    subtitle: "Backend engineer, contracted to Stream Enforcement",
     description:
-      "Building anti-piracy infrastructure for Paramount and UFC. 500K+ domains, 92% precision, replacing offshore manual review.",
+      "Building anti-piracy infrastructure for Stream Enforcement's clients, Paramount and UFC. 500K+ domains, 92% precision, replacing offshore manual review.",
     type: "experience",
   },
   {
