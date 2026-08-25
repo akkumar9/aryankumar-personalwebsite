@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState } from "react";
+import SectionPrompt from "./SectionPrompt";
 
 const stats = [
-  { label: "Users served", value: 13000, suffix: "+" },
-  { label: "Daily events processed", value: 10000, suffix: "+" },
-  { label: "Concurrent users", value: 500, suffix: "+" },
-  { label: "Performance gains", value: 50, suffix: "%" },
-  { label: "Cameras deployed", value: 12, suffix: "" },
-  { label: "Research projects", value: 3, suffix: "" },
+  { label: "users_served", value: 13000, suffix: "+" },
+  { label: "daily_events_processed", value: 10000, suffix: "+" },
+  { label: "concurrent_users", value: 500, suffix: "+" },
+  { label: "performance_gains", value: 50, suffix: "%" },
+  { label: "cameras_deployed", value: 12, suffix: "" },
+  { label: "research_projects", value: 3, suffix: "" },
 ];
 
 const StatsCounter = () => {
@@ -16,34 +17,31 @@ const StatsCounter = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
+        if (entry.isIntersecting) setIsVisible(true);
       },
       { threshold: 0.3 }
     );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
+    if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-14 border-y border-border">
+    <section ref={sectionRef} className="py-16 border-b border-border">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-6 gap-y-8 max-w-6xl mx-auto">
-          {stats.map((stat, index) => (
-            <StatCard key={index} stat={stat} isVisible={isVisible} />
-          ))}
+        <div className="max-w-xl mx-auto">
+          <SectionPrompt command="stats --summary" />
+          <div className="border border-border rounded bg-card px-5 py-4">
+            {stats.map((stat) => (
+              <StatRow key={stat.label} stat={stat} isVisible={isVisible} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
-const StatCard = ({
+const StatRow = ({
   stat,
   isVisible,
 }: {
@@ -54,12 +52,10 @@ const StatCard = ({
 
   useEffect(() => {
     if (!isVisible) return;
-
-    const duration = 1200;
-    const steps = 40;
+    const duration = 1000;
+    const steps = 30;
     const increment = stat.value / steps;
     let current = 0;
-
     const timer = setInterval(() => {
       current += increment;
       if (current >= stat.value) {
@@ -69,17 +65,16 @@ const StatCard = ({
         setCount(Math.floor(current));
       }
     }, duration / steps);
-
     return () => clearInterval(timer);
   }, [isVisible, stat.value]);
 
   return (
-    <div className="border-l border-border pl-4">
-      <div className="font-mono text-2xl md:text-3xl font-semibold text-foreground tabular-nums">
+    <div className="font-mono text-sm flex items-baseline justify-between gap-4 py-0.5">
+      <span className="text-muted-foreground">{stat.label}</span>
+      <span className="text-primary tabular-nums">
         {count.toLocaleString()}
         {stat.suffix}
-      </div>
-      <div className="text-xs text-muted-foreground mt-1">{stat.label}</div>
+      </span>
     </div>
   );
 };

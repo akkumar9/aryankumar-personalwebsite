@@ -21,7 +21,7 @@ const TerminalHero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-12">
       <div className="absolute inset-0 bg-background"></div>
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.035)_1px,transparent_1px)] bg-[size:48px_48px]"></div>
 
@@ -31,8 +31,8 @@ const TerminalHero = () => {
             <div className="bg-secondary px-4 py-3 flex items-center gap-2 border-b border-border">
               <div className="flex gap-2">
                 <div className="w-3 h-3 rounded-full bg-[hsl(0,55%,48%)]"></div>
+                <div className="w-3 h-3 rounded-full bg-[hsl(42,70%,50%)]"></div>
                 <div className="w-3 h-3 rounded-full bg-primary"></div>
-                <div className="w-3 h-3 rounded-full bg-[hsl(140,35%,42%)]"></div>
               </div>
               <span className="font-mono text-xs text-muted-foreground ml-3">zsh</span>
             </div>

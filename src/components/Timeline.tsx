@@ -1,3 +1,5 @@
+import SectionPrompt from "./SectionPrompt";
+
 const timeline = [
   {
     year: "2023",
@@ -75,32 +77,31 @@ const timeline = [
 
 const Timeline = () => {
   return (
-    <section id="achievements" className="py-20">
+    <section id="achievements" className="py-20 scroll-mt-12">
       <div className="container mx-auto px-6">
-        <div className="mb-12 max-w-2xl mx-auto text-center">
-          <div className="flex items-baseline justify-center gap-3 mb-3">
-            <span className="section-index">02</span>
-            <h2 className="font-mono text-2xl md:text-3xl font-semibold tracking-tight text-foreground">
-              Timeline
-            </h2>
-          </div>
-          <p className="text-muted-foreground">
-            Embedded systems, then AI integrations, then robotics research.
-          </p>
+        <div className="mb-10 max-w-3xl mx-auto">
+          <SectionPrompt command="log --graph timeline" />
+          <h2 className="text-xl font-semibold text-foreground">Timeline</h2>
         </div>
 
         <div className="max-w-3xl mx-auto">
           {timeline.map((item, index) => (
-            <div
-              key={index}
-              className="flex gap-6 py-5 border-b border-border last:border-b-0"
-            >
-              <div className="w-20 shrink-0 pt-0.5">
-                <span className="font-mono text-xs text-muted-foreground">
-                  {item.year}
-                </span>
+            <div key={index} className="flex gap-4">
+              <div className="relative flex flex-col items-center w-3 shrink-0">
+                <div
+                  className={`w-2.5 h-2.5 rounded-full mt-1.5 shrink-0 z-10 ${
+                    item.type === "education" ? "bg-primary" : "bg-muted-foreground/60"
+                  }`}
+                />
+                {index !== timeline.length - 1 && (
+                  <div className="w-px flex-1 bg-border" />
+                )}
               </div>
-              <div className="min-w-0">
+
+              <div className="min-w-0 pb-9">
+                <div className="font-mono text-xs text-muted-foreground mb-1">
+                  {item.year}
+                </div>
                 <div className="flex items-center gap-2 mb-1">
                   <h3 className="font-semibold text-foreground">{item.title}</h3>
                   {item.type === "education" && (

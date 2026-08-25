@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import SectionPrompt from "./SectionPrompt";
 
 const projects = [
   {
@@ -66,25 +67,18 @@ const projects = [
 
 const ProjectShowcase = () => {
   return (
-    <section id="projects" className="py-20 relative">
+    <section id="projects" className="py-20 relative scroll-mt-12">
       <div className="container mx-auto px-6">
-        <div className="mb-12 max-w-2xl mx-auto text-center">
-          <div className="flex items-baseline justify-center gap-3 mb-3">
-            <span className="section-index">01</span>
-            <h2 className="font-mono text-2xl md:text-3xl font-semibold tracking-tight text-foreground">
-              Experience
-            </h2>
-          </div>
-          <p className="text-muted-foreground">
-            Where I've worked and what I built while I was there.
-          </p>
+        <div className="mb-10 max-w-7xl mx-auto">
+          <SectionPrompt command="cat experience.log" />
+          <h2 className="text-xl font-semibold text-foreground">Experience</h2>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-7xl mx-auto">
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="group relative overflow-hidden bg-card border-border hover:border-primary/40 transition-colors duration-300"
+              className="group relative overflow-hidden rounded bg-card border-border hover:border-primary/50 transition-colors duration-300"
             >
               <CardContent className="p-6 relative z-10">
                 <div className="mb-4">
@@ -102,7 +96,7 @@ const ProjectShowcase = () => {
                         {(project as typeof project & { clients: { name: string; color: string }[] }).clients.map((c, idx) => (
                           <span
                             key={idx}
-                            className="text-xs font-bold px-2.5 py-0.5 rounded-full cursor-default"
+                            className="text-xs font-bold px-2.5 py-0.5 rounded cursor-default"
                             style={{
                               color: c.color,
                               backgroundColor: `${c.color}15`,
@@ -136,7 +130,7 @@ const ProjectShowcase = () => {
                     <Badge
                       key={idx}
                       variant="secondary"
-                      className="text-xs bg-primary/15 text-primary/85 border border-primary/25 hover:bg-primary/25 transition-colors"
+                      className="text-xs rounded bg-primary/15 text-primary/85 border border-primary/25 hover:bg-primary/25 transition-colors"
                     >
                       {tech}
                     </Badge>
