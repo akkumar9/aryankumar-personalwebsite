@@ -18,10 +18,10 @@ const projects = [
   {
     title: "Existential Robotics Lab",
     tagline: "Undergraduate Researcher, Prof. Atanasov, UC San Diego",
-    description: "Doing robotics research focused on autonomous navigation in GPS-denied environments. I built a 3D mapping pipeline fusing LiDAR and RGB-D camera data with ROS2, hitting sub-15cm localization accuracy indoors. Also profiled and restructured the pose-graph optimization to cut runtime by ~35%, which was the key to getting it running in real time on embedded hardware.",
+    description: "Did robotics research focused on autonomous navigation in GPS-denied environments. I built a 3D mapping pipeline fusing LiDAR and RGB-D camera data with ROS2, hitting sub-15cm localization accuracy indoors. Also profiled and restructured the pose-graph optimization to cut runtime by ~35%, which was the key to getting it running in real time on embedded hardware.",
     tech: ["Python", "C++", "ROS2", "SLAM", "LiDAR", "Sensor Fusion"],
     metrics: ["Sub-15cm localization accuracy", "~35% faster pose-graph optimization", "Real-time on embedded hardware"],
-    year: "Jan 2026 - Present",
+    year: "Jan 2026 - Mar 2026",
   },
   {
     title: "Qualcomm × EIEC",
@@ -37,7 +37,7 @@ const projects = [
     description: "Integrated GPT-4 with HubSpot and Salesforce CRMs to automate lead-qualification workflows, reducing manual data-entry time for client sales teams. Built a webhook ingestion service processing 10,000+ daily events with sub-200ms median response latency.",
     tech: ["Python", "GPT-4", "HubSpot", "Salesforce", "FastAPI", "WebSockets"],
     metrics: ["10K+ daily events processed", "Sub-200ms response latency", "HubSpot & Salesforce integration"],
-    year: "Dec 2025 - Present",
+    year: "Dec 2025 - May 2026",
   },
   {
     title: "UC Davis ECE",

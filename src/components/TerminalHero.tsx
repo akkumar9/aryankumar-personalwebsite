@@ -68,8 +68,8 @@ const TerminalHero = () => {
                     <div className="text-foreground/85">
                       <span className="text-primary">right now</span>{" "}
                       <span className="text-muted-foreground">·</span>{" "}
-                      anti-piracy systems at UFC, backend platform work at
-                      Qualcomm, backend at Automate365
+                      anti-piracy systems for Paramount and UFC, backend
+                      platform work at Qualcomm
                     </div>
                   </div>
 

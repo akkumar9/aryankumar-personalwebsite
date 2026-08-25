@@ -54,7 +54,7 @@ const timeline = [
     title: "Existential Robotics Lab",
     subtitle: "Undergraduate researcher",
     description:
-      "Working on probabilistic navigation with ROS2, hitting 15cm position accuracy in GPS-denied environments.",
+      "Worked on probabilistic navigation with ROS2, hitting 15cm position accuracy in GPS-denied environments.",
     type: "experience",
   },
   {
