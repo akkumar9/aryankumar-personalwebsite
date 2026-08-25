@@ -100,7 +100,7 @@ const TerminalHero = () => {
                   </div>
 
                   <div className="text-xs text-muted-foreground pt-2 font-mono">
-                    open to summer 2026 internships · San Diego, CA
+                    open to internships starting winter 2027 · San Diego, CA
                   </div>
                 </div>
               )}

@@ -9,7 +9,7 @@ const fields: { key: string; value: string; href?: string }[] = [
   },
   { key: "github", value: "akkumar9", href: "https://github.com/akkumar9" },
   { key: "location", value: "San Diego, CA" },
-  { key: "status", value: "open to summer 2026 internships" },
+  { key: "status", value: "open to internships starting winter 2027" },
 ];
 
 const ContactSection = () => {
