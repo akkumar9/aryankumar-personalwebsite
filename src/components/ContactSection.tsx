@@ -12,8 +12,8 @@ const fields: { key: string; value: string; href?: string }[] = [
     href: "https://linkedin.com/in/aryan-kumar-85b444265",
   },
   { key: "github", value: "akkumar9", href: "https://github.com/akkumar9" },
-  { key: "location", value: "San Diego / Bay Area, CA" },
-  { key: "status", value: "open to internships starting winter 2027" },
+  { key: "location", value: "Pleasanton, CA · UC San Diego" },
+  { key: "status", value: "Incoming SWE Intern, Capital One, Summer 2027" },
 ];
 
 const ContactSection = () => {
