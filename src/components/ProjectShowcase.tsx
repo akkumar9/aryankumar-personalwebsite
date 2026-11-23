@@ -53,14 +53,6 @@ const projects = [
     year: "Jul 2024 - May 2025",
   },
   {
-    title: "INSIGHT Computer Vision",
-    tagline: "Founder & Systems Engineer",
-    description: "Built computer vision system with YOLOv5 achieving 30+ FPS on edge devices. Hit 90% accuracy across 5,000+ images while making it 40% faster. Scaled to 12 cameras handling 1,000+ requests per minute.",
-    tech: ["C++", "Python", "YOLOv5", "CUDA", "Flask", "Redis"],
-    metrics: ["90% accuracy", "40% faster", "1k+ req/min"],
-    year: "Aug 2023 - Apr 2025",
-  },
-  {
     title: "SynergyPlus Platform",
     tagline: "Full-Stack Development",
     description: "Created web gradebook used by 13,000+ students across school district. Handles 50,000+ monthly requests and got 30% faster after adding Redis caching and database optimization.",
@@ -75,14 +67,6 @@ const projects = [
     tech: ["Python", "Flask", "React"],
     metrics: ["1,100+ courses monitored", "Alerts within 2 min", "99.9% uptime"],
     year: "",
-  },
-  {
-    title: "Shiftproof",
-    tagline: "Store Checklist App for Small Restaurant Chains",
-    description: "Built a store checklist app for small restaurant chains, sold to restaurants by a friend.",
-    tech: [],
-    metrics: ["Built for small restaurant chains"],
-    year: "2026 - Present",
   },
   {
     title: "DuoAssess",
