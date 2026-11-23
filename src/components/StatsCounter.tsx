@@ -6,7 +6,6 @@ const stats = [
   { label: "daily_events_processed", value: 10000, suffix: "+" },
   { label: "channels_monitored", value: 44, suffix: "+" },
   { label: "unit_tests_passing", value: 84, suffix: "" },
-  { label: "cameras_deployed", value: 12, suffix: "" },
   { label: "research_projects", value: 3, suffix: "" },
 ];
 
