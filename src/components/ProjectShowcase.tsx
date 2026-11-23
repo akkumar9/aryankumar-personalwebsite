@@ -4,13 +4,21 @@ import SectionPrompt from "./SectionPrompt";
 
 const projects = [
   {
+    title: "Capital One",
+    tagline: "Incoming Software Engineering Intern, Technology Internship Program",
+    description: "Signed offer for Summer 2027 in Richmond, VA.",
+    tech: ["Software Engineering"],
+    metrics: ["Jun 14 – Aug 13, 2027", "Technology Internship Program", "Richmond, VA"],
+    year: "Jun 2027 - Aug 2027",
+  },
+  {
     title: "Anti-Piracy Detection System",
     tagline: "Backend Engineer, 451 Degrees, LLC (contracted to Stream Enforcement)",
     clients: ["Paramount", "UFC"],
     description: "Built a multi-signal URL ranking engine in Python that scores pirated stream links 0-100 across six weighted signals to prioritize takedown candidates, plus a Telegram discovery scraper (via Telethon) that monitors 44+ piracy channels with automated polling. Wrote an 84-test suite at 100% passing and expanded NLP filtering to cut false positives.",
     tech: ["Python", "Telethon", "NLP Filtering", "Unit Testing"],
     metrics: ["44+ piracy channels monitored", "149 ranked URLs from one scrape", "84 tests, 100% passing"],
-    year: "Apr 2026 - Present",
+    year: "Apr 2026 - Sep 2026",
   },
   {
     title: "Existential Robotics Lab",
@@ -23,10 +31,10 @@ const projects = [
   {
     title: "Qualcomm × EIEC",
     tagline: "Product Developer, AI Career Platform",
-    description: "Developing go-to-market strategy and a B2B licensing model for an AI-powered career guidance platform targeting 5,000+ UCSD students. Leading product ideation, user interviews, and the university licensing pitch.",
-    tech: ["Product Strategy", "B2B Licensing", "User Research", "Go-to-Market"],
-    metrics: ["Targeting 5,000+ UCSD students", "Built the B2B licensing model", "Leading the university licensing pitch"],
-    year: "Oct 2025 - Present",
+    description: "Built an AI career platform with pgvector semantic job matching, LLM match explanations, and streamed LLM roadmap, resume, and cover-letter features. Led go-to-market strategy and a B2B licensing model for 5,000+ UCSD students.",
+    tech: ["Next.js", "Supabase", "PostgreSQL", "pgvector", "LLM Integration"],
+    metrics: ["Targeting 5,000+ UCSD students", "Built the B2B licensing model", "Semantic job matching with LLM explanations"],
+    year: "Oct 2025 - Jun 2026",
   },
   {
     title: "Automate365",
@@ -59,6 +67,30 @@ const projects = [
     tech: ["React", "Node.js", "PostgreSQL", "Redis"],
     metrics: ["13k+ users", "50k+ monthly requests", "30% performance gain"],
     year: "2023 - 2025",
+  },
+  {
+    title: "CourseSniper",
+    tagline: "Personal Project",
+    description: "Polls 1,100+ UCSD courses for seat openings and emails alerts within 2 minutes, at 99.9% uptime.",
+    tech: ["Python", "Flask", "React"],
+    metrics: ["1,100+ courses monitored", "Alerts within 2 min", "99.9% uptime"],
+    year: "",
+  },
+  {
+    title: "Shiftproof",
+    tagline: "Store Checklist App for Small Restaurant Chains",
+    description: "Built a store checklist app for small restaurant chains, sold to restaurants by a friend.",
+    tech: [],
+    metrics: ["Built for small restaurant chains"],
+    year: "2026 - Present",
+  },
+  {
+    title: "DuoAssess",
+    tagline: "YC Hackathon Project",
+    description: "Built at a YC Hackathon.",
+    tech: ["Swift", "iOS"],
+    metrics: ["YC Hackathon"],
+    year: "2026",
   },
 ];
 
