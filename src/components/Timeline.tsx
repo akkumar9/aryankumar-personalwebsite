@@ -34,11 +34,11 @@ const timeline = [
     type: "education",
   },
   {
-    year: "Oct 2025",
+    year: "Oct 2025 – Jun 2026",
     title: "Qualcomm × EIEC",
     subtitle: "Product developer, AI career platform",
     description:
-      "Developing go-to-market strategy and a B2B licensing model for an AI career platform targeting 5,000+ UCSD students.",
+      "Built an AI career platform with pgvector semantic job matching, LLM match explanations, and streamed LLM roadmap, resume, and cover-letter features, plus go-to-market strategy for 5,000+ UCSD students.",
     type: "experience",
   },
   {
@@ -58,11 +58,19 @@ const timeline = [
     type: "experience",
   },
   {
-    year: "Apr 2026",
+    year: "Apr 2026 – Sep 2026",
     title: "451 Degrees, LLC",
     subtitle: "Backend engineer, contracted to Stream Enforcement",
     description:
       "Built a multi-signal URL ranking engine and a Telegram scraper monitoring 44+ piracy channels for Stream Enforcement's clients, Paramount and UFC.",
+    type: "experience",
+  },
+  {
+    year: "Jun 2027 – Aug 2027",
+    title: "Capital One",
+    subtitle: "Incoming Software Engineering Intern, Technology Internship Program",
+    description:
+      "Signed offer for Summer 2027 in Richmond, VA.",
     type: "experience",
   },
   {
