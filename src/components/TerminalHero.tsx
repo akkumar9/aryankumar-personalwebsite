@@ -50,7 +50,7 @@ const TerminalHero = () => {
                       Aryan Kumar
                     </div>
                     <div className="text-muted-foreground text-sm md:text-base">
-                      Computer engineering @ UC San Diego · Jacobs Scholar
+                      Computer engineering @ UC San Diego · Jacobs Scholar · Class of 2028
                     </div>
                   </div>
 
@@ -83,6 +83,16 @@ const TerminalHero = () => {
                       }
                     >
                       See what I've built
+                    </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-border text-foreground hover:bg-secondary"
+                      asChild
+                    >
+                      <a href="/Aryan-Kumar-Resume.pdf" download>
+                        Download resume
+                      </a>
                     </Button>
                     <Button
                       size="lg"
