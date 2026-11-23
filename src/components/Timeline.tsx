@@ -10,14 +10,6 @@ const timeline = [
     type: "experience",
   },
   {
-    year: "Aug 2023",
-    title: "Founded INSIGHT Computer Vision",
-    subtitle: "Systems engineer",
-    description:
-      "Real-time object detection at 90% accuracy across 5,000+ images, running on 12 camera nodes.",
-    type: "experience",
-  },
-  {
     year: "Jul 2024",
     title: "UC Davis ECE Department",
     subtitle: "Embedded systems engineer",
