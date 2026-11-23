@@ -2,7 +2,6 @@ import StatusBar from "@/components/StatusBar";
 import TerminalHero from "@/components/TerminalHero";
 import StatsCounter from "@/components/StatsCounter";
 import ProjectShowcase from "@/components/ProjectShowcase";
-import Timeline from "@/components/Timeline";
 import ContactSection from "@/components/ContactSection";
 
 const Index = () => {
@@ -12,7 +11,6 @@ const Index = () => {
       <TerminalHero />
       <StatsCounter />
       <ProjectShowcase />
-      <Timeline />
       <ContactSection />
 
       <footer className="border-t border-border py-6">
