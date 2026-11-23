@@ -67,6 +67,16 @@ const projects = [
     tech: ["Python", "Flask", "React"],
     metrics: ["1,100+ courses monitored", "Alerts within 2 min", "99.9% uptime"],
     year: "",
+    repo: "https://github.com/akkumar9/Course-Sniper",
+  },
+  {
+    title: "RISC-V Emulator",
+    tagline: "Personal Project — RV32I emulator with JIT compiler",
+    description: "Functional RISC-V RV32I emulator in C++ that executes real compiled binaries, with an ELF loader, 128MB addressable memory, and a JIT compiler that translates hot RISC-V code to native ARM64 at runtime, 10-100x speedup over pure interpretation.",
+    tech: ["C++", "RISC-V", "ARM64 JIT", "ELF"],
+    metrics: ["Full RV32I instruction set", "JIT to native ARM64", "10-100x speedup over interpretation"],
+    year: "",
+    repo: "https://github.com/akkumar9/RISCV-Emulator",
   },
   {
     title: "DuoAssess",
@@ -75,6 +85,7 @@ const projects = [
     tech: ["Swift", "iOS", "iPhone Duo"],
     metrics: ["Copy Me: per-limb match scoring", "Assess: squat form + facial symmetry", "Dual-display coaching"],
     year: "2026",
+    repo: "https://github.com/akkumar9/bitrighacks",
   },
 ];
 
@@ -148,6 +159,19 @@ const ProjectShowcase = () => {
                     </Badge>
                   ))}
                 </div>
+
+                {"repo" in project && (project as typeof project & { repo?: string }).repo && (
+                  <div className="mt-4">
+                    <a
+                      href={(project as typeof project & { repo: string }).repo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-sm font-mono text-primary hover:underline"
+                    >
+                      View code →
+                    </a>
+                  </div>
+                )}
               </CardContent>
             </Card>
           ))}
