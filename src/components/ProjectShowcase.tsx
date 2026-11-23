@@ -70,10 +70,10 @@ const projects = [
   },
   {
     title: "DuoAssess",
-    tagline: "YC Hackathon Project",
-    description: "Built at a YC Hackathon.",
-    tech: ["Swift", "iOS"],
-    metrics: ["YC Hackathon"],
+    tagline: "YC Hackathon Project — Two-sided movement coaching for iPhone Duo",
+    description: "Two-sided movement coaching for iPhone Duo. One person works on the inner display, the other sees a clean coaching view on the outer display, and folding the phone scrubs the video. Copy Me mode scores how closely the learner matches the demonstrator per limb and ghosts the demonstrator's pose over the learner's body. Assess mode grades squat form and facial symmetry for a single person.",
+    tech: ["Swift", "iOS", "iPhone Duo"],
+    metrics: ["Copy Me: per-limb match scoring", "Assess: squat form + facial symmetry", "Dual-display coaching"],
     year: "2026",
   },
 ];
