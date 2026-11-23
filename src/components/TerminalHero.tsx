@@ -68,8 +68,7 @@ const TerminalHero = () => {
                     <div className="text-foreground/85">
                       <span className="text-primary">right now</span>{" "}
                       <span className="text-muted-foreground">·</span>{" "}
-                      incoming SWE intern, Capital One, Summer 2027 · building
-                      Shiftproof, a store checklist app for small restaurant chains
+                      incoming SWE intern, Capital One, Summer 2027
                     </div>
                   </div>
 
