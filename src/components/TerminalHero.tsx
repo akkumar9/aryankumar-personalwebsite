@@ -58,7 +58,7 @@ const TerminalHero = () => {
                     <div className="text-foreground/85">
                       <span className="text-primary">role</span>{" "}
                       <span className="text-muted-foreground">·</span>{" "}
-                      product developer, backend engineer, robotics researcher
+                      incoming software engineering intern, Capital One · backend engineer, robotics researcher
                     </div>
                     <div className="text-foreground/85">
                       <span className="text-primary">focus</span>{" "}
@@ -68,8 +68,8 @@ const TerminalHero = () => {
                     <div className="text-foreground/85">
                       <span className="text-primary">right now</span>{" "}
                       <span className="text-muted-foreground">·</span>{" "}
-                      anti-piracy systems for Paramount and UFC, product
-                      work on an AI career platform at Qualcomm
+                      incoming SWE intern, Capital One, Summer 2027 · building
+                      Shiftproof, a store checklist app for small restaurant chains
                     </div>
                   </div>
 
@@ -100,7 +100,7 @@ const TerminalHero = () => {
                   </div>
 
                   <div className="text-xs text-muted-foreground pt-2 font-mono">
-                    open to internships starting winter 2027 · San Diego / Bay Area, CA
+                    incoming SWE intern, Capital One, Summer 2027 · Pleasanton, CA / San Diego, CA
                   </div>
                 </div>
               )}
