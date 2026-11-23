@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const navItems = [
   { label: "experience", href: "#projects" },
-  { label: "timeline", href: "#achievements" },
+  { label: "resume", href: "/Aryan-Kumar-Resume.pdf" },
   { label: "contact", href: "#contact" },
 ];
 
@@ -60,6 +60,18 @@ const StatusBar = () => {
       <nav className="hidden md:flex items-center gap-8 justify-self-center font-mono text-sm">
         {navItems.map((item) => {
           const isActive = activeSection === item.href.substring(1);
+          if (item.href.startsWith("/")) {
+            return (
+              <a
+                key={item.href}
+                href={item.href}
+                download
+                className="transition-colors text-muted-foreground hover:text-foreground"
+              >
+                {item.label}
+              </a>
+            );
+          }
           return (
             <button
               key={item.href}
@@ -75,7 +87,7 @@ const StatusBar = () => {
       </nav>
 
       <div className="justify-self-end font-mono text-xs text-muted-foreground hidden lg:block">
-        San Diego / Bay Area, CA
+        Pleasanton, CA / San Diego, CA
       </div>
     </header>
   );
